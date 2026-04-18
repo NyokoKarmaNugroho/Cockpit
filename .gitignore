@@ -1,0 +1,69 @@
+# --- Secrets & environment (never commit real keys) ---
+**/.env
+!**/.env.example
+**/.env.*
+!**/.env.example
+.env.keys
+.env.vault
+.env*.local
+**/.env*.local
+
+# Keys & credentials
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.p12
+*.pfx
+*.keystore
+credentials.json
+*-credentials.json
+service-account*.json
+.secrets/
+secrets/
+
+# Dependencies & build output
+node_modules/
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# Logs & debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Test & coverage
+coverage/
+.nyc_output/
+
+# Supabase CLI local state (also see backend/supabase/.gitignore)
+**/.supabase/
+
+# Download / partial files (often accidental)
+*.crdownload
+*.part
+
+# Large ICIJ CSVs exceed GitHub’s 100MB blob limit — keep locally, import via scripts
+backend/dataset/The ICIJ Offshore Leaks Database/nodes-entities.csv
+backend/dataset/The ICIJ Offshore Leaks Database/relationships.csv
+
+# Optional local overrides
+*.local.override

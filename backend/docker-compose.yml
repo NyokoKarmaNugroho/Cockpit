@@ -1,0 +1,10 @@
+# Cockpit API only — Postgres/Supabase is expected separately (hosted or `supabase start`).
+services:
+  cockpit-api:
+    build: .
+    ports:
+      - "${PORT:-8787}:8787"
+    env_file:
+      - .env
+    environment:
+      PORT: "8787"

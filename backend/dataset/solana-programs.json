@@ -1,0 +1,1252 @@
+[
+  {
+    "name": "1Sol Program",
+    "address": "1MooN32fuBBgApc8ujknKJw5sef3BVwPGgz3pto1BAh",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Address Lookup Table Program",
+    "address": "AddressLookupTab1e1111111111111111111111111",
+    "category": "Native"
+  },
+  {
+    "name": "Adrena Program",
+    "address": "13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Aldrin AMM Program V1",
+    "address": "AMM55ShdkoGRB5jVYPjWziwk8m5MpwyDgsMWHaMSQWH6",
+    "category": "Swap"
+  },
+  {
+    "name": "Aldrin AMM Program V2",
+    "address": "CURVGoZn8zycx6FXwwevgBTB2gVvdbGTEpvMJDbgs2t4",
+    "category": "Swap"
+  },
+  {
+    "name": "Allbridge Program",
+    "address": "BrdgN2RPzEMWF96ZbnnJaUtQDQx7VRXYaHHbYCBvceWB",
+    "category": "Bridge"
+  },
+  {
+    "name": "Alpha Q Program",
+    "address": "ALPHAQmeA7bjrVuccPsYPiCvsi428SNwte66Srvs4pHA",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Ape.pro Smart Wallet Program",
+    "address": "JSW99DKmxNyREQM14SQLDykeBvEUG63TeohrvmofEiw",
+    "category": "Swap"
+  },
+  {
+    "name": "Apricot Finance Program",
+    "address": "6UeJYTLU1adaoHWeApWsoj1xNEDbWA2RhM2DLc8CrDDi",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Arbitrage Bot (2A6m4)",
+    "address": "2A6m4MBgk3xL6a8SBMdKmAmFc85tTLh4Ds6wy7dBxBxb",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (2Vxcb)",
+    "address": "2VxcbQDXkbaLHzShMsJGieXGTd239FbNseX1Qx6yLW7V",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (3AQz4)",
+    "address": "3AQz4t3ShixZWw5vhvkAindHhMco3s12gxgvGuMeh2Yg",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (3QUnr)",
+    "address": "3QUnrcMqCQoiGB73s1A6uDzxziywaNFpTLiZiiZbEUoN",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (3s1rA)",
+    "address": "3s1rAymURnacreXreMy718GfqW6kygQsLNka1xDyW8pC",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (6MWVT)",
+    "address": "6MWVTis8rmmk6Vt9zmAJJbmb3VuLpzoQ1aHH4N6wQEGh",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (8KDGP)",
+    "address": "8KDGPdXXr6QQbXFyXh4kchwmQGLJoroUJccymFhubqcW",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (9Du1k)",
+    "address": "9Du1kkHrjKCVqbtKoxVVQnKxBX3vJMiEKc9sBtbgkC3L",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (9GCBb)",
+    "address": "9GCBb4NsSDRuEkkGfQkN37oppmMVPops5sXDWhAKAvQQ",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (9i7Qd)",
+    "address": "9i7QdbBHx7fjLAAaFfcDRgkdS4oNfKv8duzyE27a1kJ6",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (9Zzf9Q)",
+    "address": "9Zzf9QqTy3TkyXysvJBsXyuRjda5aXCEJ9vXfL2HKSYv",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (AtomC)",
+    "address": "AtomCf57Gdp49TDf2q6w7ypqEwPEaCCpxbpTdD4RmDQt",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (BaMpe)",
+    "address": "BaMpent4Np6pYZ7JLDmtZNFJ8o3VBnHdy6A9mGDyZRW8",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (BxM2i)",
+    "address": "BxM2ipMbq66MuCdSDgjxMpc3cPUvoKLZ9CcSxqwmWQH",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (CroWg)",
+    "address": "CroWg74XNDF8UMnAZVbXx49iVj7iJ7b4CsqTCVWF7aK",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (DDsnwb)",
+    "address": "DDsnwb7dxKSjzTYDFjU8F6rpYNZa1sp7Fmfb2nGDAMEo",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (DiabLo)",
+    "address": "DiabLoFN9hCNkEc2HhCtgo1VqeQvyRXQiGh2B14mnwJs",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (eniGmY)",
+    "address": "eniGmY45bxbnZQBKLBsEqzjbEvtD5yVibntSHCAohVh",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (Fibo6)",
+    "address": "Fibo6vWHQLVqh6ci5BbdPrNR29q2qesJqiSEbR99y8L9",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (FsU1r)",
+    "address": "FsU1rcaEC361jBr9JE5wm7bpWRSTYeAMN4R2MCs11rNF",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (G2E4e)",
+    "address": "G2E4eoenFMirpFKRfHNo2koDP7mrhnNWVwxyHASSpjQD",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (HVi6V)",
+    "address": "HVi6VyyLvTtFTA8f8atavxVjUKi8WjmnydfKgoZKzt7H",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (joeHSu)",
+    "address": "joeHSutRWndCtp1EPx5tz5zHyaPBZUZ5JsxDEVB1RPZ",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (King7)",
+    "address": "King7ki4SKMBPb3iupnQwTyjsq294jaXsgLmJo8cb7T",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (L6pUp)",
+    "address": "L6pUpkHtq3CLtJRTrZ9GsBxfweZ8iPS6CnDQMdmcbad",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (mine9)",
+    "address": "mine9YMaEywEJyysaDLjYngt8pYXxQDsdakUewPEW8S",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (rexhf)",
+    "address": "rexhfZLRRxRkPkw9izswgMFRPDb9U58jeinH7wqUVuw",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (sattC)",
+    "address": "sattCHvHkM4XHLyadnU4KQtuNWZbWVDKzuPhmJBXCkq",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Arbitrage Bot (XxXxX)",
+    "address": "XxXxXwJhqsCqZ5yzrykvjwVnUpqBUJP6g6cYjFt2dfW",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Associated Token Account Program",
+    "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    "category": "Native"
+  },
+  {
+    "name": "AVE Program",
+    "address": "AveaiuA1emN71q9mS2QQ9BEWNAAHmp8sHSvwLFHQjufM",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Axiom Trade Program",
+    "address": "FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Banana Gun Router Program",
+    "address": "BANANAjs7FJiPQqJTGFzkZJndT9o7UmKiYYGaJz6frGu",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Binance Alpha 2.0 Program 1",
+    "address": "BN111JnbLtbmQqqiCh7h2pDKhAhMx4wi77Mj7jJFbyp8",
+    "category": "Swap"
+  },
+  {
+    "name": "Binance Wallet Program 2",
+    "address": "BN111AnCthcdPVNJ6jkir9TDaS7xqXT8EhetAmYpNqFt",
+    "category": "Swap"
+  },
+  {
+    "name": "Bitget DEX Aggregator Program",
+    "address": "s7SunwrPG5SbViEKiViaDThPRJxkkTrNx2iRPN3exNC",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Bitget Swap Program 2",
+    "address": "2UUgGySTVXmKFatH7pGQo84ZrzdSYF5zw9iqrGwBMuuj",
+    "category": "Swap"
+  },
+  {
+    "name": "Bloom Router Program",
+    "address": "b1oomGGqPKGD6errbyfbVMBuzSC8WtAAYo8MwNafWW1",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Bonk Bot Router Program",
+    "address": "BBRouter1cVunVXvkcqeKkZQcBK7ruan37PPm3xzWaXD",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Bonk Stake Program",
+    "address": "STAKEkKzbdeKkqzKpLkNQD3SUuLgshDKCD7U8duxAbB",
+    "category": "Staking"
+  },
+  {
+    "name": "Bonk Swap Program",
+    "address": "BSwp6bEBihVLdqJRKGgzjcGLHkcTuzmSo1TQkHepzH8p",
+    "category": "Swap"
+  },
+  {
+    "name": "Boop.fun Program",
+    "address": "boop8hVGQGqehUK2iVEMEnMrL5RbjywRzHKBmBE7ry4",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Bophades Program",
+    "address": "NinafKYvKDCH26v6uEpfDjyuDjjpbdfhiPjrJV6FTFs",
+    "category": "Trading App or Trading Bot"
+  },
+  {
+    "name": "Bubblegum Program",
+    "address": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY",
+    "category": "NFT"
+  },
+  {
+    "name": "Byreal CLMM Program",
+    "address": "REALQqNEomY6cQGZJUGwywTBD2UmDT32rZcNnfxQ5N2",
+    "category": "Swap"
+  },
+  {
+    "name": "Byreal Router Program",
+    "address": "REALp6iMBDTctQqpmhBo4PumwJGcybbnDpxtax3ara3",
+    "category": "Swap"
+  },
+  {
+    "name": "Cabana Program (Manifest)",
+    "address": "UMnFStVeG1ecZFc2gc5K3vFy3sMpotq8C91mXBQDGwh",
+    "category": "Swap"
+  },
+  {
+    "name": "Chainlink Store Program",
+    "address": "HEvSKofvBgfaexv23kMabbYqxasxU3mQ4ibBMEmJWHny",
+    "category": "Oracle"
+  },
+  {
+    "name": "Circle CCTP Message Minter",
+    "address": "CCTPiPYPc6AsJuwueEnWgSgucamXDZwBd53dQ11YiKX3",
+    "category": "Bridge"
+  },
+  {
+    "name": "Circle CCTP Message Transmitter",
+    "address": "CCTPmbSD7gX1bxKPAmg77w8oFzNFpaQiQUWD43TKaecd",
+    "category": "Bridge"
+  },
+  {
+    "name": "Compute Budget Program",
+    "address": "ComputeBudget111111111111111111111111111111",
+    "category": "Native"
+  },
+  {
+    "name": "Crema Finance Program",
+    "address": "6MLxLqiXaaSUpkgMnWDTuejNZEz3kE7k2woyHGVFw319",
+    "category": "Swap"
+  },
+  {
+    "name": "Cropper Finance Program",
+    "address": "CTMAxxk34HjKWxQ3QLZK1HpaLXmBveao3ESePXbiyfzh",
+    "category": "Swap"
+  },
+  {
+    "name": "deBridge Destination Program",
+    "address": "dst5MGcFPoBeREFAA5E3tU5ij8m5uVYwkzkSAbsLbNo",
+    "category": "Bridge"
+  },
+  {
+    "name": "deBridge Program",
+    "address": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh",
+    "category": "Bridge"
+  },
+  {
+    "name": "deBridge Source Program",
+    "address": "src5qyZHqTqecJV4aY6Cb6zDZLMDzrDKKezs22MPHr4",
+    "category": "Bridge"
+  },
+  {
+    "name": "DeFiTuna Program",
+    "address": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD",
+    "category": "DeFi"
+  },
+  {
+    "name": "Degen Coin Flip Program",
+    "address": "BmjJ85zsP2xHPesBKpmHYKt136gzeTtNbeVDcdfybHHT",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Deltafi Swap Program",
+    "address": "GNExJhNUhc9LN2DauuQAUJnXoy6DJ6zey3t9kT9A2PF3",
+    "category": "Swap"
+  },
+  {
+    "name": "DFlow Program v4",
+    "address": "DF1ow4tspfHX9JwWJsAb9epbkA8hmpSEAtxXy1V27QBH",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Drift Protocol Clearing House Program",
+    "address": "dammHkt7jmytvbS3nHTxQNEcP59aE57nxwV21YdqEDN",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Drift V2 Program",
+    "address": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Elusiv Program",
+    "address": "4CgyHKuP6yi1vbmcdsArngEKcETR4nZupqYEMk2hEoQd",
+    "category": "Privacy"
+  },
+  {
+    "name": "Flash Trade Program",
+    "address": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "FluxBeam Program",
+    "address": "FLUXubRmkEi2q6K3Y9kBPg9248ggaZVsoSFhtJHSrm1X",
+    "category": "Swap"
+  },
+  {
+    "name": "Fragmetric Liquid Restake Program",
+    "address": "fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3",
+    "category": "Staking"
+  },
+  {
+    "name": "Francium Lending Program",
+    "address": "FC81tbGt6JWRXidaWYFXxGnTk4VgobhJHATvTRVMqgWj",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Fusion AMM Program",
+    "address": "fUSioN9YKKSa3CUC2YUc4tPkHJ5Y6XW1yz8y6F7qWz9",
+    "category": "Swap"
+  },
+  {
+    "name": "Gamba Program",
+    "address": "Gamba2hK6KV3quKq854B3sQG1WMdq3zgQLPKqyK4qS18",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Gate.io Web3 Router Program",
+    "address": "2rwUXt3JeyPtUBjH5pscZLRDBoh9WADfXq7gyoDnLcC4",
+    "category": "Aggregator"
+  },
+  {
+    "name": "GMGN Bot Program",
+    "address": "GMgnVFR8Jb39LoXsEVzb3DvBy3ywCmdmJquHUy1Lrkqb",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Goatswap Program",
+    "address": "Goats192jeQq3r2sn8pe69LyJtisLMfEoq8LyDienct1",
+    "category": "Swap"
+  },
+  {
+    "name": "GoonFi v2 Program",
+    "address": "goonuddtQRrWqqn5nFyczVKaie28f3kDkHWkHtURSLE",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "GooseFX GAMMA Program",
+    "address": "GAMMA7meSFWaBXF25oSUgmGRwaW6sCMFLmBNiMSdbHVT",
+    "category": "Swap"
+  },
+  {
+    "name": "Grass Airdrop Program",
+    "address": "Eohp5jrnGQgP74oD7ij9EuCSYnQDLLHgsuAmtSTuxABk",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Hawksight Program",
+    "address": "FqGg2Y1FNxMiGd51Q6UETixQWkF5fB92MysbYogRJb3P",
+    "category": "DeFi"
+  },
+  {
+    "name": "Heaven DEX Program",
+    "address": "HEAVENoP2qxoeuF8Dj2oT1GHEnu49U5mJYkdeC8BAX2o",
+    "category": "Swap"
+  },
+  {
+    "name": "Helium Data Credits Program",
+    "address": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+    "category": "Data"
+  },
+  {
+    "name": "Helium Entity Manager Program",
+    "address": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Hivemapper Reward Program",
+    "address": "EEjwuvCMVYjgHUeX1BM9qmUog59Pft88c3jbt2ATwcJw",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "HumidiFi Program",
+    "address": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Hyperlane Mailbox Program",
+    "address": "E588QtVUvresuXq2KoNEwAmoifCzYGpRBdHByN9KQMbi",
+    "category": "Bridge"
+  },
+  {
+    "name": "IO.net Program",
+    "address": "TNEAhD5qctW2xn4YgDkExuWUTfrg6Wqba4bJrzmMwS6",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Jito Restaking Program",
+    "address": "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q",
+    "category": "Staking"
+  },
+  {
+    "name": "Jito Tip Payment Program",
+    "address": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Jito Tip Router",
+    "address": "RouterBmuRBkPUbgEDMtdvTZ75GBdSREZR5uGUxxxpb",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Jupiter Aggregator V3",
+    "address": "JUP3c2Uh3WA4Ng34tw6kPd2G4C5BB21Xo36Je1s32Ph",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter Aggregator V4",
+    "address": "JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter Aggregator V5.1",
+    "address": "JUP5pEAZeHdHrLxh5UCwAbpjGwYKKoquCpda2hfP4u8",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter Aggregator V5.2",
+    "address": "JUP5cHjnnCx2DppVsufsLrXs8EBZeEZzGtEK9Gdz6ow",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter ASR Distribution Program",
+    "address": "Dis2TfkFnXFkrtvAktEkw37sdb7qwJgY6H7YZJwk51wK",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Jupiter DCA Program",
+    "address": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M",
+    "category": "Swap"
+  },
+  {
+    "name": "Jupiter DTF Program",
+    "address": "presSVxnf9UU8jMxhgSMqaRwNiT36qeBdNeTRKjTdbj",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Jupiter Flash Fill Program",
+    "address": "JUPLdTqUdKztWJ1isGMV92W2QvmEmzs9WTJjhZe4QdJ",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter Governance Program",
+    "address": "GovaE4iu227srtG2s3tZzB4RmWBzw8sTwrCLZz7kN7rY",
+    "category": "Governance"
+  },
+  {
+    "name": "Jupiter Jupuary Program",
+    "address": "DiS3nNjFVMieMgmiQFm6wgJL7nevk4NrhXKLbtEH1Z2R",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Jupiter Lend Borrow Program",
+    "address": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Jupiter Lend Liquidity Program",
+    "address": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Jupiter LFG Program",
+    "address": "DiSLRwcSFvtwvMWSs7ubBMvYRaYNYupa76ZSuYLe6D7j",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Jupiter Order Engine Program",
+    "address": "61DFfeTKM7trxYcPQCM78bJ794ddZprZpAwAnLiwTpYH",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Jupiter Perps Program",
+    "address": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Jupiter Voter Program",
+    "address": "voTpe3tHQ7AjQHMapgSue2HJFAh2cGsdokqN3XqmVSj",
+    "category": "Governance"
+  },
+  {
+    "name": "JupUSD Program",
+    "address": "JUPUSDecMzAVgztLe6eGhwUBj1Pn3j9WAXwmtHmfbRr",
+    "category": "DeFi"
+  },
+  {
+    "name": "Kamino Farms Program",
+    "address": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+    "category": "DeFi"
+  },
+  {
+    "name": "Kamino Lend Program",
+    "address": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Kamino Vault Program",
+    "address": "kvauTFR8qm1dhniz6pYuBZkuene3Hfrs1VQhVRgCNrr",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "LayerZero DVN Program",
+    "address": "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW",
+    "category": "Bridge"
+  },
+  {
+    "name": "LayerZero Endpoint Program",
+    "address": "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6",
+    "category": "Bridge"
+  },
+  {
+    "name": "Legacy Token Program",
+    "address": "TokenSVp5gheXUvJ6jGWGeCsgPKgnE3YgdGKRVCMY9o",
+    "category": "Native"
+  },
+  {
+    "name": "Lido Solana Program",
+    "address": "CrX7kMhLC3cSsXJdT7JDgqrRVWGnUpX3gfEfxxU2NVLi",
+    "category": "Staking"
+  },
+  {
+    "name": "LIFI Bridge Program",
+    "address": "3i5JeuZuUxeKtVysUnwQNGerJP2bSMX9fTFfS4Nxe3Br",
+    "category": "Bridge"
+  },
+  {
+    "name": "Lifinity Program",
+    "address": "EewxydAPCCVuNEyrVN68PuSYdQ7wKn27V9Gjeoi8dy3S",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Lifinity Swap V2 Program",
+    "address": "2wT8Yq49kHgDzXuPxZSaeLaH1qbmGXtEyPy64bL7aD3c",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Liquid Mesh Router Program",
+    "address": "HuTkmnrv4zPnArMqpbMbFhfwzTR7xfWQZHH1aQKzDKFZ",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Loopscale Program",
+    "address": "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Lulo Program (Flexlend)",
+    "address": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Maestro Bot Program",
+    "address": "MaestroAAe9ge5HTc64VbBQZ6fP77pwvrhM8i1XWSAx",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Magic Eden NFT Marketplace",
+    "address": "MEisE1HzehtrDpAAT8PnLHjpSSkRYakotTuJRPjTpo8",
+    "category": "NFT"
+  },
+  {
+    "name": "Mango Program V2",
+    "address": "5fNfvyp5czQVX77yoACa3JJVEhdRaWjPuazuWgjhTqEH",
+    "category": "DeFi"
+  },
+  {
+    "name": "Mango Program V3",
+    "address": "mv3ekLzLbnVPNxjSKvqBpU3ZeZXPQdEC3bp5MDEBG68",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Mango Program V4",
+    "address": "4MangoMjqJ2firMokCjjGgoK8d4MXcrgL7XJaL3w6fVg",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Maple Finance Lending Program",
+    "address": "5D9yi4BKrxF8h65NkVE1raCCWFKUs5ngub2ECxhvfaZe",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Marginfi V2 Program",
+    "address": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+    "category": "Borrow Lend"
+  },
+  {
+    "name": "Marinade Native Staking Proxy Program",
+    "address": "mnspJQyF1KdDEs5c6YJPocYdY1esBgVQFufM2dY9oDk",
+    "category": "Staking"
+  },
+  {
+    "name": "Mayan Swift Bridge Program",
+    "address": "BLZRi6frs4X4DNLw56V4EXai1b6QVESN1BhHBTYM9VcY",
+    "category": "Bridge"
+  },
+  {
+    "name": "Memo Program",
+    "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+    "category": "Native"
+  },
+  {
+    "name": "Memo Program v1",
+    "address": "Memo1UhkJRfHyvLMcVucJwxXeuD728EqVDDwQDxFMNo",
+    "category": "Native"
+  },
+  {
+    "name": "Mercurial Stable Swap Program",
+    "address": "MERLuDFBMmsHnsBPZw2sDQZHvXFMwp8EdjudcU2HKky",
+    "category": "Swap"
+  },
+  {
+    "name": "Metaplex Auction House Program",
+    "address": "hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk",
+    "category": "NFT"
+  },
+  {
+    "name": "Metaplex Candy Guard Program",
+    "address": "Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g",
+    "category": "NFT"
+  },
+  {
+    "name": "Metaplex Core Program",
+    "address": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Metaplex Program",
+    "address": "p1exdMJcjVao65QdewkaZRUnU6VPSXhus9n2GzWfh98",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Meteora DAMM v1 Program",
+    "address": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+    "category": "Swap"
+  },
+  {
+    "name": "Meteora DAMM V2 Program",
+    "address": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+    "category": "Swap"
+  },
+  {
+    "name": "Meteora Dynamic Bonding Curve Program",
+    "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+    "category": "Swap"
+  },
+  {
+    "name": "Meteora Dynamic Fee Sharing Program",
+    "address": "dfsdo2UqvwfN8DuUVrMRNfQe11VaiNoKcMqLHVvDPzh",
+    "category": "Swap"
+  },
+  {
+    "name": "Meteora Dynamic Vault Program",
+    "address": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi",
+    "category": "Swap"
+  },
+  {
+    "name": "Meteora Farming Program",
+    "address": "FarmuwXPWXvefWUeqFAa5w6rifLkq5X6E8bimYvrhCB1",
+    "category": "Swap"
+  },
+  {
+    "name": "Monaco Protocol Program",
+    "address": "monacoUXKtUi6vKsQwaLyxmXKSievfNWEcYXTgkbCih",
+    "category": "Compression"
+  },
+  {
+    "name": "Moonit Program",
+    "address": "MoonCVVNZFSYkqNXP6bxHLPL6QQJiMagDL3qcqUQTrG",
+    "category": "Launchpad"
+  },
+  {
+    "name": "MPL Account Compression Program",
+    "address": "mcmt6YrQEMKw8Mw43FmpRLmf7BqRnFMKmAcbxE3xkAW",
+    "category": "Compression"
+  },
+  {
+    "name": "Multisig Program",
+    "address": "H88LfRBiJLZ7wYkHGuwkKTaijfQxexq8JvzUndu7fyjL",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Name Service Program",
+    "address": "namesLPneVptA9Z5rqUDD9tMTWEJwofgaYwp8cawRkX",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Neon EVM Program",
+    "address": "NeonVMyRX5GbCrsAHnUwx1nYYoJAtskU1bWUo6JGNyG",
+    "category": "Bridge"
+  },
+  {
+    "name": "Nosana Jobs Program",
+    "address": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Obric V2 Program",
+    "address": "obriQD1zbpyLz95G5n7nJe6a4DPjpFwa5XYPoNm113y",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "OKX Smart Account Program",
+    "address": "sa12qbQyuQqEaDcEqEPKmZEGTdzSMaqj87nKRYbE3QE",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "OKX Vault Program",
+    "address": "va1t8sdGkReA6XFgAeZGXmdQoiEtMirwy4ifLv7yGdH",
+    "category": "DeFi"
+  },
+  {
+    "name": "Ondo Global Markets Program",
+    "address": "XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm",
+    "category": "Market"
+  },
+  {
+    "name": "Orca Aquafarm Program",
+    "address": "82yxjeMsvaURa4MbZZ7WZZHfobirZYkH1zF8fmeGtyaQ",
+    "category": "Swap"
+  },
+  {
+    "name": "Orca Swap Program V1",
+    "address": "DjVE6JNiYqPL2QXyCUUh8rNjHrbz9hXHNYt99MQ59qw1",
+    "category": "Swap"
+  },
+  {
+    "name": "Orca Swap Program V2",
+    "address": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+    "category": "Swap"
+  },
+  {
+    "name": "Ore V2 Program",
+    "address": "oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
+    "category": "DeFi"
+  },
+  {
+    "name": "PancakeSwap Program",
+    "address": "HpNfyc2Saw7RKkQd8nEL4khUcuPhQ7WwY1B2qjx8jxFq",
+    "category": "Swap"
+  },
+  {
+    "name": "Parcl V3 Program",
+    "address": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Pengu Airdrop Claim Program",
+    "address": "CUEB3rQGVrvCRTmyjLrPnsd6bBBsGbz1Sr49vxNLJkGR",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Phoenix Perpetuals Program",
+    "address": "phDEVv4w6BcfkLrLNeXr8HhhgQxnxziVGXpGPcaadMf",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Phoenix Program",
+    "address": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "Photon Program",
+    "address": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Port Finance Program",
+    "address": "Port7uDYB3wk6GJAw4KT1WpTeMtSu9bTcChBHkX2LfR",
+    "category": "DeFi"
+  },
+  {
+    "name": "Pump Agent Payments Program",
+    "address": "AgenTMiC2hvxGebTsgmsD4HHBa8WEcqGFf87iwRRxLo7",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pump Mayhem Program",
+    "address": "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pump.fun Fees Program",
+    "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pump.fun ICO Program",
+    "address": "sa1ETko3qCiK1miqxar8oMdRuRv2gEqxoTQy7ZhDadE",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pump.fun Program",
+    "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pumpup.ai Program",
+    "address": "PdMDrKEMaX8q7CCJb7NvUCxerBCcsFUa4LjBEynTtEd",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Pyth Airdrop Program",
+    "address": "EXxqB6XPLczReFcZyigfbdowB6WGYtnkLYC4XZ2ae9ch",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Pyth Express Relay Program",
+    "address": "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou",
+    "category": "Oracle"
+  },
+  {
+    "name": "Pyth Oracle Program",
+    "address": "gSbePebfvPy7tRqimPoVecS2UsBvYv46ynrzWocc92s",
+    "category": "Oracle"
+  },
+  {
+    "name": "Pyth Price Feed Program",
+    "address": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT",
+    "category": "Oracle"
+  },
+  {
+    "name": "Pyth Staking Program",
+    "address": "pytS9TjG1qyAZypk7n8rw8gfW9sUaqqYyMhJQ4E7JCQ",
+    "category": "Staking"
+  },
+  {
+    "name": "Rango Program",
+    "address": "RangohQxaWip6i1twAAnRVLmob9j88fid7sq2DMAATW",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Rarible Program",
+    "address": "raria47jXd4tdW6Dj7T64mgahwTjMsVaDwFxMHt9Jbp",
+    "category": "NFT"
+  },
+  {
+    "name": "Raydium AMM Route Program",
+    "address": "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS",
+    "category": "Swap"
+  },
+  {
+    "name": "Raydium AMM V4 Program",
+    "address": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+    "category": "Swap"
+  },
+  {
+    "name": "Raydium Concentrated Liquidity Program",
+    "address": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+    "category": "Swap"
+  },
+  {
+    "name": "Raydium CP Swap",
+    "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+    "category": "Swap"
+  },
+  {
+    "name": "Raydium IDO v3 Program",
+    "address": "9HzJyW1qZsEiSfMUf6L2jo3CcTKAyBmSyKdwQeYisHrC",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Raydium LaunchLab Program",
+    "address": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Raydium Liquidity Pool Program V2 (Old)",
+    "address": "27haf8L6oxUeXrHrgEgsexjSY5hbVUWEmvv9Nyxg8vQv",
+    "category": "Swap"
+  },
+  {
+    "name": "Raydium Lock Program",
+    "address": "6BtsN2jo6ijrwCUnMPzXcB8G4hYpASgpHaKWQmHbubV9",
+    "category": "DeFi"
+  },
+  {
+    "name": "Raydium Staking Farm V4 Program",
+    "address": "CBuCnLe26faBpcBP2fktp4rp8abpcAnTWft6ZrP5Q4T",
+    "category": "Staking"
+  },
+  {
+    "name": "Raydium Staking Farm V5 Program",
+    "address": "9KEPoZmtHUrBbhWN1v1KWLMkkvwY6WLtAVUCPRtRjP4z",
+    "category": "Staking"
+  },
+  {
+    "name": "Raydium Staking Farm V6 Program",
+    "address": "FarmqiPv5eAj3j1GMdMCMUGXqPUvmquZtMy86QH6rzhG",
+    "category": "Staking"
+  },
+  {
+    "name": "Realms Governance Program",
+    "address": "GovER5Lthms3bLBqWub97yVrMmEogzX7xNjdXpPPCVZw",
+    "category": "Governance"
+  },
+  {
+    "name": "RedStone Oracle Program",
+    "address": "REDSTBDUecGjwXd6YGPzHSvEUBHQqVRfCcjUVgPiHsr",
+    "category": "Oracle"
+  },
+  {
+    "name": "Saber Decimal Wrapper Program",
+    "address": "DecZY86MU5Gj7kppfUCEmd4LbXXuyZH1yHaP2NTqdiZB",
+    "category": "Swap"
+  },
+  {
+    "name": "Saber Farm Program",
+    "address": "FARM1U7g8p6XG18m3P25Rnb1RPVQZt2sC4ax35CyJzyc",
+    "category": "DeFi"
+  },
+  {
+    "name": "Saber Lockup Program",
+    "address": "LockKXdYQVMbhhckwH3BxoYJ9FYatcZjwNGEuCwY33Q",
+    "category": "DeFi"
+  },
+  {
+    "name": "Saber Pools Program",
+    "address": "SMANK4F5osjfVpKFH5LPzE6HPpbzSPu5iHPBhuor5xU",
+    "category": "Swap"
+  },
+  {
+    "name": "Saber Stable Swap Program",
+    "address": "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ",
+    "category": "Swap"
+  },
+  {
+    "name": "Sanctum Controller Program",
+    "address": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+    "category": "Staking"
+  },
+  {
+    "name": "Sanctum Multi-Validator SPL Stake Pool Program",
+    "address": "SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn",
+    "category": "Staking"
+  },
+  {
+    "name": "Sanctum Router Program",
+    "address": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq",
+    "category": "Staking"
+  },
+  {
+    "name": "Sanctum Single Validator SPL Stake Pool Program",
+    "address": "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY",
+    "category": "Staking"
+  },
+  {
+    "name": "Sanctum Staking Program",
+    "address": "bon4Kh3x1uQK16w9b9DKgz3Aw4AP1pZxBJk55Q6Sosb",
+    "category": "Staking"
+  },
+  {
+    "name": "Sanctum Unstake Program",
+    "address": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ",
+    "category": "Staking"
+  },
+  {
+    "name": "Sandwich Bot (BXxgGt)",
+    "address": "BXxgGt3akAghZviYHLh8KUh6vhXBht5wf86De6huTp95",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Sandwich Bot (EpjnU)",
+    "address": "EpjnUueXY3MmZZw2n8FobumsJpZN6kTUB8mREr2SKXRW",
+    "category": "Arbitrage or Sandwich Bot"
+  },
+  {
+    "name": "Saros AMM Program",
+    "address": "SSwapUtytfBdBn1b9NUGG6foMVPtcWgpRU32HToDUZr",
+    "category": "Swap"
+  },
+  {
+    "name": "Saros DLMM Program",
+    "address": "1qbkdrr3z4ryLA7pZykqxvxWPoeifcVKo6ZG9CfkvVE",
+    "category": "Swap"
+  },
+  {
+    "name": "Scorch Program",
+    "address": "SCoRcH8c2dpjvcJD6FiPbCSQyQgu3PcUAWj2Xxx3mqn",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Serum Dex Program V2",
+    "address": "EUqojwWA2rd19FZrzeBncJsm38Jm1hEhE3zsmX3bRc2o",
+    "category": "Swap"
+  },
+  {
+    "name": "Serum Dex Program V3",
+    "address": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+    "category": "Swap"
+  },
+  {
+    "name": "Shadow Drive Program",
+    "address": "2e1wdyNhUvE76y6yUCvah2KaviavMJYKoRun8acMRBZZ",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "SharkyFi Program",
+    "address": "SHARKobtfF1bHhxD2eqftjHBdVSCbKo9JtgK71FhELP",
+    "category": "NFT"
+  },
+  {
+    "name": "Sigma Program",
+    "address": "EaigzjxajzSRoPPBw93GSzthzKuhAqmZqVtnJiqD5run",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "SNS Records Program",
+    "address": "HP3D4D1ZCmohQGFVms2SS4LCANgJyksBf5s1F77FuFjZ",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Solayer Endo AVS Program",
+    "address": "endoLNCKTqDn8gSVnN2hDdpgACUPWHZTwoYnnMybpAT",
+    "category": "Staking"
+  },
+  {
+    "name": "SolFi Program",
+    "address": "SoLFiHG9TfgtdUXUjWAxi3LtvYuFyDLVhBWxdMZxyCe",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "SolFi V2 Program",
+    "address": "SV2EYYJyRz2YhfXwXnhNAevDEui5Q6yrfyo13WtupPF",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "SpherePay Program",
+    "address": "AYGdvqsQruZoaJPWsViLqUgtbfXGRnxzgxzW4zmbbckL",
+    "category": "Payments"
+  },
+  {
+    "name": "SPL Noop Program",
+    "address": "noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV",
+    "category": "Native"
+  },
+  {
+    "name": "Squads Mesh Program",
+    "address": "SMPLVC8MxZ5Bf5EfF7PaMiTCxoBAcmkbM2vkrvMK8ho",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Squads V4 Program",
+    "address": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Squads Validator Program",
+    "address": "SMPLbiNbsa19gf9jz8x9uHSvSn9VLFJB38dGy46kqJ7",
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Stabble Swap Program",
+    "address": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ",
+    "category": "Swap"
+  },
+  {
+    "name": "Stake Pool Program",
+    "address": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+    "category": "Native"
+  },
+  {
+    "name": "Star Atlas Score Program",
+    "address": "FLEET1qqzpexyaDpqb2DGsSzE2sDCizewCg9WjrA6DBW",
+    "category": "Uncategorized"
+  },
+  {
+    "name": "Switchboard Oracle Program",
+    "address": "DtmE9D2CSB4L5D6A15mraeEjrGMm6auWVzgaD8hK2tZM",
+    "category": "Oracle"
+  },
+  {
+    "name": "SwitchBoardV2 Program",
+    "address": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+    "category": "Oracle"
+  },
+  {
+    "name": "Symmetry Vaults v3 Program",
+    "address": "BASKT7aKd8n7ibpUbwLP3Wiyxyi3yoiXsxBk4Hpumate",
+    "category": "DeFi"
+  },
+  {
+    "name": "Tensor Escrow Program",
+    "address": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+    "category": "NFT"
+  },
+  {
+    "name": "Tensor Fees Program",
+    "address": "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A",
+    "category": "NFT"
+  },
+  {
+    "name": "Tensor Whitelist Program",
+    "address": "TL1ST2iRBzuGTqLn1KXnGdSnEow62BzPnGiqyRXhWtW",
+    "category": "NFT"
+  },
+  {
+    "name": "Terminal (formerly Padre) Program",
+    "address": "term9YPb9mzAsABaqN71A4xdbxHmpBNZavpBiQKZzN3",
+    "category": "Trading Sniper"
+  },
+  {
+    "name": "Tessera V Program",
+    "address": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "TipLink Escrow Program",
+    "address": "8TqqugH88U3fDEWeKHqBSxZKeqoRrXkdpy3ciX5GAruK",
+    "category": "Payments"
+  },
+  {
+    "name": "Titan Exchange Program",
+    "address": "T1TANpTeScyeqVzzgNViGDNrkQ6qHz9KrSBS4aNXvGT",
+    "category": "Aggregator"
+  },
+  {
+    "name": "Token Program",
+    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "category": "Native"
+  },
+  {
+    "name": "TribecaHQ Govern Program",
+    "address": "Govz1VyoyLD5BL6CSCxUJLVLsQHRwjfFj1prNsdNg5Jw",
+    "category": "Governance"
+  },
+  {
+    "name": "Vertigo Program",
+    "address": "vrTGoBuy5rYSxAfV3jaRJWHH6nN9WK4NRExGxsk1bCJ",
+    "category": "Launchpad"
+  },
+  {
+    "name": "Vote Program",
+    "address": "Vote111111111111111111111111111111111111111",
+    "category": "Native"
+  },
+  {
+    "name": "Wasabi Program",
+    "address": "spicyTHtbmarmUxwFSHYpA8G4uP2nRNq38RReMpoZ9c",
+    "category": "Perpetuals"
+  },
+  {
+    "name": "WhaleStreet Program",
+    "address": "FW6zUqn4iKRaeopwwhwsquTY6ABWLLgjxtrC3VPnaWBf",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Wormhole",
+    "address": "WormT3McKhFJ2RkiGpdw9GKvNCrB2aB54gb2uV9MfQC",
+    "category": "Bridge"
+  },
+  {
+    "name": "Wormhole Core Bridge",
+    "address": "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ",
+    "category": "Bridge"
+  },
+  {
+    "name": "Wormhole Staking Program",
+    "address": "MGoV9M6YUsdhJzjzH9JMCW2tRe1LLxF1CjwqKC7DR1B",
+    "category": "Staking"
+  },
+  {
+    "name": "Zebec Program",
+    "address": "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX",
+    "category": "Payments"
+  },
+  {
+    "name": "ZeroFi Program",
+    "address": "ZERor4xhbUycZ6gb9ntrhqscUcZmAbQDjEAtCf4hbZY",
+    "category": "Proprietary AMM"
+  },
+  {
+    "name": "Zeta Serum Markets Program",
+    "address": "zDEXqXEG7gAyxb1Kg9mK5fPnUdENCGKzWrM21RMdWRq",
+    "category": "Perpetuals"
+  }
+]

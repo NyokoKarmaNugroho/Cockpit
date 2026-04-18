@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Submit in Google Search Console after deploy:
+Sitemap: https://cockpitintel.com/sitemap.xml

@@ -1,0 +1,323 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "National Archives Find Case Law: Public API",
+    "version": "0.5.1",
+    "description": "Our API provides access to judgments and other documents held by The National Archives and published via the Find Case Law service.\n\n## Open Justice Licence\n\nThe National Archives has worked in collaboration with The Ministry of Justice and the Judicial Executive Board to design a new licensing framework for the reuse of case law as data. The [Open Justice licence](https://caselaw.nationalarchives.gov.uk/open-justice-licence) is designed to protect the personal data within the records while supporting the principles of Open Justice.\n\nThe Open Justice licence allows you to copy, publish, distribute and transmit case law data. It permits you to use the data commercially, for example, by combining it with other information, or by including it in your own product or application. There are certain conditions that apply under this licence.\n\nYou do not need to apply to re-use Find Case Law records if your re-use complies with the terms and conditions of the Open Justice Licence.\n\n**The Open Justice licence does not permit computational analysis.** If you intend to do any programmatic searching in bulk across the Find Case Law records to identify, extract or enrich contents within the records you will need to [apply to perform computational analysis](https://caselaw.nationalarchives.gov.uk/re-use-find-case-law-records/licence-application-process). There are no application charges.\n\n## Document identifiers\n\nDocuments in Find Case Law are identified in two different ways, one which is better for machines and one which is better for humans:\n\n### Document URI\n\nEvery document in Find Case Law has a unique machine-readable identifier which is not designed to be human-facing. You should prefer using this identifier internally when referencing Find Case Law documents, as it is stable and globally unique. Document URIs can contain the characters `a-z`, `0-9`, `/` and `-`.\n\n#### Documents prior to April 2025\n\nDocuments which were submitted to the National Archives prior to April 2025 will have a URI in the form `court/year/sequence`, for example `uksc/2024/123`. Although this looks like it contains many attributes from a Neutral Citation Number, you should _not_ treat it as such and attempt to extract information from it.\n\n#### New-style URIs\n\nDocuments submitted to the National Archives from April 2025 onwards will usually have a URI which looks something like `d-f11e093f-8a53-4e43-8dd8-1531b5d8f018`. These will always begin with a `d-`.\n\n### Structured identifiers\n\nIn addition to the Document URI, all documents will also have one or more \"structured identifiers\" representing ways which humans can refer to a document. This currently includes Find Case Law Identifiers (for all documents) and Neutral Citation Numbers (for judgments which have them), but may be extended in future.\n\nEach identifier will have – as a minimum – a `type`, a `value` and a `slug` which can be turned into a human-facing URL by appending it to `https://caselaw.nationalarchives.gov.uk`.\n\nIdentifiers are _not_ guaranteed to be unique to a single document.\n\n#### Examples\n\n| Type                     | `type`   | Example `value`   | Example `slug`  |\n| ------------------------ | -------- | ----------------- | ----------------|\n| Find Case Law Identifier | `fclid`  | `cw7s3kws`        | `tna.cw7s3kws`  |\n| Neutral Citation Number  | `ukncn`  | `[2024] UKSC 123` | `uksc/2024/123` |\n\n#### Preferred identifier\n\nEach document will have exactly one preferred identifier, determined by the Find Case Law system, which it will prefer for displaying to users and generating public-facing URLs. You must _not_ make any assumptions about the type of this preferred identifier, as it may change.\n\n## Rate limits\n\nYou can make up to **1,000 requests** (of any type) to Find Case Law in any **rolling five minute period** per IP address. If you have exceeded this, you will receive a `HTTP 429` error code.\n\nIf you need to make more requests, please email [caselaw@nationalarchives.gov.uk](mailto:caselaw@nationalarchives.gov.uk) to talk about your requirements.\n\n## Give us your feedback\n\nWe are still actively developing the Find Case Law service. This includes improving how you can access our data programmatically.\n\nIf you have suggestions, comments or queries about the API or the data it provides, please email them to [caselaw@nationalarchives.gov.uk](mailto:caselaw@nationalarchives.gov.uk).\n\nIf you'd be interested in taking part in user research to help improve the service, please [sign up](https://www.smartsurvey.co.uk/s/CaseLaw-research/).",
+    "termsOfService": "https://caselaw.nationalarchives.gov.uk/terms-of-use",
+    "contact": {
+      "email": "caselaw@nationalarchives.gov.uk",
+      "url": "https://caselaw.nationalarchives.gov.uk/",
+      "name": "Find Case Law"
+    },
+    "license": {
+      "name": "Open Justice Licence",
+      "url": "https://caselaw.nationalarchives.gov.uk/open-justice-licence"
+    },
+    "summary": "The Find Case Law API allows you to access court judgments and tribunal decisions held in the [Find Case Law service](https://caselaw.nationalarchives.gov.uk/), operated by the National Archives."
+  },
+  "servers": [
+    {
+      "url": "https://caselaw.nationalarchives.gov.uk",
+      "description": "Find Case Law"
+    }
+  ],
+  "components": {
+    "parameters": {
+      "documentUri": {
+        "name": "document_uri",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "examples": {
+          "ncn-based": {
+            "value": "uksc/2024/123",
+            "summary": "An older Neutral Citation Number-based document URI"
+          },
+          "uuid-based": {
+            "value": "d-f11e093f-8a53-4e43-8dd8-1531b5d8f018",
+            "summary": "A newer document URI"
+          }
+        },
+        "description": "The unique identifier for this document within Find Case Law."
+      }
+    },
+    "responses": {
+      "tooManyRequests": {
+        "description": "Too Many Requests"
+      },
+      "documentFeed": {
+        "description": "An Atom feed of documents, sorted by one of the dates within those documents.\n",
+        "content": {
+          "application/xml": {
+            "schema": {
+              "description": "List in Atom"
+            },
+            "examples": {
+              "list": {
+                "description": "An example of a complete response, with only one `entry`.",
+                "value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<?xml-stylesheet href=\"/static/atom.xsl\" type=\"text/xsl\" ?>\n<feed xml:lang=\"en-us\" xmlns=\"http://www.w3.org/2005/Atom\" xmlns:tna=\"https://caselaw.nationalarchives.gov.uk\">\n    <title>Latest documents, sorted by date the document was first published by the court (newest first)</title>\n    <link href=\"https://caselaw.nationalarchives.gov.uk/atom.xml\" rel=\"alternate\"/>\n    <link href=\"https://caselaw.nationalarchives.gov.uk/atom.xml\" rel=\"self\"/>\n    <id>https://caselaw.nationalarchives.gov.uk/atom.xml</id>\n    <updated>2025-04-30T15:00:00+00:00</updated>\n    <author>\n        <name>The National Archives</name>\n    </author>\n    <rights>https://caselaw.nationalarchives.gov.uk/open-justice-licence</rights>\n    <link href=\"https://caselaw.nationalarchives.gov.uk/atom.xml?page=1\" rel=\"first\"/>\n    <link href=\"https://caselaw.nationalarchives.gov.uk/atom.xml?page=6675\" rel=\"last\"/>\n    <link href=\"https://caselaw.nationalarchives.gov.uk/atom.xml?page=2\" rel=\"next\"/>\n    <entry>\n        <title>Jarndyce v. Jarndyce</title>\n        <link href=\"https://caselaw.nationalarchives.gov.uk/uksc/2024/123\" rel=\"alternate\"/>\n        <published>2025-04-30T00:00:00+00:00</published>\n        <updated>2025-04-30T09:54:24+00:00</updated>\n        <author>\n            <name>Upper Tribunal (Lands Chamber)</name>\n        </author>\n        <id>https://caselaw.nationalarchives.gov.uk/id/d-9b51d493-65ba-471f-8f08-c369ec66e3f8</id>\n        <summary type=\"html\"/>\n        <tna:contenthash>d1b2a59fbea7e20077af9f91b27e95e865061b270be03ff539ab3b73587882e8</tna:contenthash>\n        <link href=\"https://caselaw.nationalarchives.gov.uk/uksc/2024/123/data.xml\" rel=\"alternate\" type=\"application/akn+xml\"/>\n        <tna:uri>d-9b51d493-65ba-471f-8f08-c369ec66e3f8</tna:uri>\n        <tna:identifier slug=\"uksc/2024/123\" type=\"ukncn\">[2024] UKSC 123</tna:identifier>\n        <tna:identifier slug=\"tna.r8d6ps87\" type=\"fclid\">r8d6ps87</tna:identifier>\n        <link href=\"https://assets.caselaw.nationalarchives.gov.uk/d-9b51d493-65ba-471f-8f08-c369ec66e3f8/d-9b51d493-65ba-471f-8f08-c369ec66e3f8.pdf\" rel=\"alternate\" type=\"application/pdf\"/>\n    </entry>\n</feed>\n"
+              }
+            }
+          }
+        }
+      },
+      "document": {
+        "description": "The contents of a single document, as [Akoma Ntoso XML](https://www.oasis-open.org/standard/akn-v1-0/).",
+        "content": {
+          "application/akn+xml": {
+            "schema": {
+              "description": "Akoma Ntoso"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/atom.xml": {
+      "get": {
+        "summary": "Get an Atom feed of documents",
+        "description": "Return a list of documents in Find Case Law, ordered by date.\n\nWithout any parameters, this will order by the most recently handed down judgments and documents first. The parameters used are identical to those used for the advanced search at https://caselaw.nationalarchives.gov.uk/judgments/search: a link to the feed mirroring those search results is available on each search result.\n\nEach differently named parameter filters out documents that do not match it.\n\nThe feed has multiple pages (see the `link` tag with a `rel` attribute of `next` for the next page).\n\nEach `entry` element contains a different document's metadata. Not all documents will contain all tags.\n\nNotable tags and elements include:\n* `<published>`: The date the document was first published by the court (for judgments, the 'handed down' date)\n* `<updated>`: The date the XML of the document was last updated in Find Case Law. This may include not only changes to the text, but also minor changes to markup such as formatting or annotations.\n* `<link rel=\"alternate\"/>`: A link to the document's page on Find Case Law (with HTML representation, where one exists)\n* `<link rel=\"alternate\" type=\"application/akn+xml\"/>`: A link to an XML representation of the document\n* `<link rel=\"alternate\" type=\"application/pdf\"/>`: A link to a PDF representation of the document\n* `<tna:uri>`: The [Document URI](#document-uri) in Find Case Law.\n* `<tna:identifier>`: One element per [identifier](#document-identifiers) known to relate to this document.\n* `<tna:contenthash>`: A hash of the text in the document. See [Content Hash](#content-hash) for more.\n* `<tna:assets_base>`: The location of any images in the XML (e.g. `image1.png`) can be prefixed with this to download those images. Please do not hotlink: the URL here is not guaranteed to be stable.\n",
+        "operationId": "atomFeed",
+        "parameters": [
+          {
+            "name": "query",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Full text search of a judgment. `\"financial records\"` will only find judgments with those two words in that order. Multiple\nspace-separated words will only find judgments that have all those words.\n"
+          },
+          {
+            "name": "court",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explode": true,
+            "description": "A court code. Currently there are two forms of court code, one used in the URL structure (`ewhc/fam`) and one used in the XML\ncourt tag `EWHC-Family`. Either can be searched for. If multiple courts or tribunals are given, results from all those courts\nmay be returned.\n",
+            "example": [
+              "uksc",
+              "ukpc"
+            ]
+          },
+          {
+            "name": "tribunal",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explode": true,
+            "description": "An alias for the `court` parameter.\n",
+            "example": [
+              "eat"
+            ]
+          },
+          {
+            "name": "party",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "A full-match for a word in the name of a party to the judgment.\n"
+          },
+          {
+            "name": "judge",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "A full-match for a word in the name of a judge or similar involved in the judgment\n"
+          },
+          {
+            "name": "order",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "date",
+                "-date",
+                "updated",
+                "-updated",
+                "transformation",
+                "-transformation"
+              ],
+              "default": "-date"
+            },
+            "description": "Which of the dates within the document to use for ordering. Prepend a `-` to sort by newest first.\n\n- `date`: The date the document was first published by the court\n- `updated`: The last date the document was updated in the Find Case Law system, including any changes to its metadata\n- `transformation`: The date the body of the document was last modified, including changes to either the body text, XML markup, or both\n"
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            },
+            "description": "Where results are across multiple pages, the page of results to return."
+          },
+          {
+            "name": "per_page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 50
+            },
+            "description": "How many results to list per page.\n"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/documentFeed"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          }
+        },
+        "tags": [
+          "Document metadata"
+        ]
+      }
+    },
+    "/{document_uri}/data.xml": {
+      "get": {
+        "summary": "Get document XML",
+        "operationId": "getDocumentByUri",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/document"
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          }
+        },
+        "tags": [
+          "Document contents"
+        ],
+        "description": "Retrieve the XML of a single document based on its identifier.\n\n## A note on images\n\nWhere a document contains images, the XML will _not_ provide an absolute URL where the image can be found. Instead, all image locations in the XML are relative to an arbitrary root location.\n\nTo find the root location for a document's assets you will need to find the document's `assets_base` value. At the moment, this is only available via the [Atom feed](#operation/atomFeed).\n\nWe *strongly* recommend against storing an `assets_base` for the purposes of hotlinking, as these are not guaranteed to be stable.\n"
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/documentUri"
+        }
+      ]
+    },
+    "/{court}/{subdivision}/{year}/atom.xml": {
+      "get": {
+        "summary": "Get a list of recently published or updated documents",
+        "description": "Deprecated -- will now redirect to `/atom.xml` with relevant parameters\n\nLess specific feeds can be gained by omitting the components e.g. `/`, `/2022/`, `/ewhc/` and `/ewhc/ch/` are all valid prefixes to `atom.xml`.\n\nNote that a `{court}` is required if there is a `{subdivision}`.\n",
+        "operationId": "listJudgments",
+        "parameters": [
+          {
+            "name": "order",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "date",
+                "-date",
+                "updated",
+                "-updated",
+                "transformation",
+                "-transformation"
+              ],
+              "default": "-date"
+            },
+            "description": "Which of the dates within the document to use for ordering. Prepend a `-` to sort by newest first.\n\n- `date`: The date the document was first published by the court\n- `updated`: The last date the document was updated in the Find Case Law system, including changes to its metadata\n- `transformation`: The date the body of the document was last modified, including changes to either the body text, XML markup, or both\n"
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            },
+            "description": "Where results are across multiple pages, the page of results to return."
+          }
+        ],
+        "responses": {
+          "301": {
+            "description": "Moved Permanently",
+            "headers": {
+              "location": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "https://caselaw.nationalarchives.gov.uk/atom.xml?court={court}/{subdivision}&year={year}&order=-date&page=1"
+              }
+            }
+          },
+          "429": {
+            "$ref": "#/components/responses/tooManyRequests"
+          }
+        },
+        "tags": [
+          "Document metadata"
+        ],
+        "deprecated": true
+      },
+      "parameters": [
+        {
+          "name": "court",
+          "required": true,
+          "in": "path",
+          "example": "ewca",
+          "schema": {
+            "type": "string"
+          },
+          "description": "The court code to return results for."
+        },
+        {
+          "name": "subdivision",
+          "required": true,
+          "in": "path",
+          "example": "pat",
+          "schema": {
+            "type": "string"
+          },
+          "description": "The court subdivision code to return results for."
+        },
+        {
+          "name": "year",
+          "required": true,
+          "in": "path",
+          "example": 2022,
+          "schema": {
+            "type": "integer"
+          },
+          "description": "The year to return results for."
+        }
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Document metadata",
+      "description": "## Detecting content changes\n\nWe recommend setting the `order` parameter of the Atom feed to `-transformation` to detect changes made to judgments, as this will list the most recently changed documents first:\n\n`https://caselaw.nationalarchives.gov.uk/atom.xml?order=-transformation`\n\n### Using the date\n\nIf you always want to have the latest XML of a document, even if the changes are only to markup and the content has not changed (for example, if we have made some formatting improvements) the easiest way is to store the date the document was last changed. You can find this as either:\n\n- The `date` attribute of the `<FRBRdate name=\"transform\"/>` tag within the LegalDocML representation\n- The `<updated>` element of an `<entry>` in the Atom feed\n\nYou can then compare this stored date to the `<updated>` element in the Atom feed, and only take action if the Atom feed's date is more recent.\n\n### Using the content hash\n\nIf you are not interested in minor improvements to the XML document markup, and only care about changes to the document itself, you can use the content hash.\n\nThis hash is generated by removing all XML markup and leaving only the body text of the document, and then generating a SHA256 hash of that text. As such this hash should be stable across things such as formatting changes, and will only change if the text of the document does.\n\nYou can find the content hash as either:\n\n- The `<uk:hash>` element within the `<proprietary>` element of the LegalDocML representation\n- The `<tna:contenthash>` element of an `<entry>` in the Atom feed\n\nBy storing the content hash when you first retrieve a document you can then compare it in future to detect if the text has changed.\n"
+    },
+    {
+      "name": "Document contents",
+      "description": "## Document formats\n\nDocuments within Find Case Law are mostly available as structured XML, although some older documents are only available as PDFs.\n\n### XML\n\nWhere documents exist as XML, these have been submitted for publication by the courts as a Microsoft Word document. This has then been automatically converted to XML, marked up according to the [international data standard (LegalDocML)](https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=3425f20f-b704-4076-9fab-018dc7d3efbe). This data includes:\n\n- Neutral Citation\n- Court / Chamber\n- Date\n- Case Name\n- Party Names\n- Judges' Names\n\nXML documents are then automatically converted to HTML for publication on the Find Case Law website.\n\nFor documents which have been submitted directly to the National Archives our legal editorial team have checked data for consistency and accuracy. However, older documents have not always been checked in this way and you may discover inconsistencies in the metadata. If you do, you can report data errors to [caselaw@nationalarchives.gov.uk](mailto:caselaw@nationalarchives.gov.uk).\n\n### PDF\n\nSome documents, particularly historic documents, may only exist as PDFs. In these cases we will provide as much metadata regarding the document as we are able, although this may not be as complete as in an XML document.\n"
+    }
+  ]
+}
