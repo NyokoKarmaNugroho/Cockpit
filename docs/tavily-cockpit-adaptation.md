@@ -1,6 +1,8 @@
+> **Scope:** Tavily for **server-side** agents and RAG. Set `TAVILY_API_KEY` only in an API service—never in the Vite bundle. This repo’s `frontend/` is marketing-only.
+
 # Tavily → Cockpit (web intelligence primitives)
 
-How [Tavily](https://docs.tavily.com/documentation/quickstart.md) fits Cockpit’s agent + RAG stack: **Search**, **Extract**, **Map**, **Crawl**, and **Research**.
+How [Tavily](https://docs.tavily.com/documentation/quickstart.md) fits Cockpit’s **planned** agent + RAG stack: **Search**, **Extract**, **Map**, **Crawl**, and **Research**.
 
 Official doc index: [Tavily `llms.txt`](https://docs.tavily.com/llms.txt).
 
@@ -16,7 +18,7 @@ Tavily provides **web intelligence primitives** you can compose:
 
 ## Credentials and where they live
 
-- **Backend only**: set `TAVILY_API_KEY` in `backend/.env` (see `backend/.env.example`).
+- **Server only**: set `TAVILY_API_KEY` in your API service environment (gitignored `.env` or secret manager).
 - **Never in the Vite bundle**: treat Tavily keys like any other paid web API key.
 
 Quickstart reference: [Tavily Quickstart](https://docs.tavily.com/documentation/quickstart.md).
@@ -36,14 +38,13 @@ Implementation note for Cockpit workers: handle HTTP `429` and respect `retry-af
 
 ## Integration paths
 
-### 1) Direct JS SDK (Node) for Cockpit backend
+### 1) Direct JS SDK (Node) for a Cockpit API service
 
-Cockpit backend is TypeScript/Node. The simplest integration is the Tavily JS SDK (`@tavily/core`) used server-side.
+The simplest integration is the Tavily JS SDK (`@tavily/core`) used server-side.
 
-Install:
+Install (in your API project):
 
 ```bash
-cd backend
 npm install @tavily/core
 ```
 
@@ -63,7 +64,7 @@ If you’re running Python agents, Tavily’s LangChain integration recommends `
 
 See: [LangChain integration](https://docs.tavily.com/documentation/integrations/langchain.md).
 
-Cockpit note: the current Cockpit backend uses **LangChain JS** for some RAG ingestion. If you later add Python pipelines (e.g., research jobs, enrichment batches), align on `TAVILY_API_KEY` and keep it server-side.
+Cockpit note: if you use **LangChain JS** for RAG ingestion in an API repo, keep the same env key. If you later add Python pipelines (e.g., research jobs, enrichment batches), align on `TAVILY_API_KEY` and keep it server-side.
 
 ## Using Map vs Crawl (when building RAG sources)
 

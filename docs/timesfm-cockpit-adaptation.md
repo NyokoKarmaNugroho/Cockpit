@@ -1,6 +1,8 @@
+> **Scope:** Forecasting / analytics lane for a **future** backend or warehouse. This repo is **frontend-only**; TimesFM integration would live outside the Vite app.
+
 # TimesFM → Cockpit adaptation
 
-This document distills **[google-research/timesfm](https://github.com/google-research/timesfm)** for engineering decisions in Cockpit (Node/TypeScript backend, Postgres, Dune/Sim integrations). It is **not** a port of TimesFM; it records when and how to use forecasting in product-appropriate ways. For Hermes-style agent loops and how TimesFM fits the optional “analytics lane,” see [agent-runtime-hermes-adaptation.md](./agent-runtime-hermes-adaptation.md) §7.
+This document distills **[google-research/timesfm](https://github.com/google-research/timesfm)** for engineering decisions in a Cockpit **API or data stack** (Node/TypeScript, Postgres, Dune/Sim integrations). It is **not** a port of TimesFM; it records when and how to use forecasting in product-appropriate ways. For Hermes-style agent loops and how TimesFM fits the optional “analytics lane,” see [agent-runtime-hermes-adaptation.md](./agent-runtime-hermes-adaptation.md) §7.
 
 **Primary sources:** [TimesFM repository](https://github.com/google-research/timesfm) (README, `AGENTS.md`, `pyproject.toml`), [TimesFM in BigQuery ML](https://docs.cloud.google.com/bigquery/docs/timesfm-model), [ICML 2024 paper](https://arxiv.org/abs/2310.10688) (*A decoder-only foundation model for time-series forecasting*), [Google Research blog](https://research.google/blog/a-decoder-only-foundation-model-for-time-series-forecasting/).
 

@@ -1,16 +1,18 @@
+> **Scope:** Reference for a **server-side** Chainalysis integration. This repo ships the **marketing frontend** only (`frontend/`). Implement the API client in your **API service** (not in the Vite bundle); paths below are illustrative.
+
 # Chainalysis public Sanctions API (Cockpit)
 
 ## Where the full write-up lives
 
-- **Long-form reference** (introduction, definitions, endpoint, terms): [`backend/dataset/Chainalysis.md`](../backend/dataset/Chainalysis.md)
-- **Official product / signup / current spec**: [public.chainalysis.com](https://public.chainalysis.com) (Sanctions API signup and documentation)
+- **Official product / signup / current spec:** [public.chainalysis.com](https://public.chainalysis.com) (Sanctions API signup and documentation)  
+- Keep a **local markdown note** in your API project (e.g. `docs/Chainalysis.md`) with endpoint details and terms if you need offline reference—do not commit API keys.
 
-## How Cockpit calls it
+## How to call it (server-side)
 
-Use the **backend** helper only. The API does **not** support browser CORS; keys must stay on the server.
+The API does **not** support browser CORS; keys must stay on the server.
 
-- Module: [`backend/src/integrations/chainalysis/sanctionsApi.ts`](../backend/src/integrations/chainalysis/sanctionsApi.ts)
-- Env: `CHAINALYSIS_API_KEY` in `backend/.env` (see `backend/.env.example`)
+- **Env:** `CHAINALYSIS_API_KEY` in your API service environment (e.g. `.env`, gitignored).
+- Implement a small helper module (e.g. `integrations/chainalysis/sanctionsApi.ts`) that wraps `GET https://public.chainalysis.com/api/v1/address/{address}` per Chainalysis docs.
 
 Example:
 

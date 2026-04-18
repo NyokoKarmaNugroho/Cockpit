@@ -8,7 +8,13 @@ Status: Draft v1 (untuk review)
 Cockpit adalah aplikasi web (frontend Vite + React + TypeScript) untuk intelijen blockchain yang menargetkan alur kerja investigasi/analisis. **Repo publik saat ini berisi situs marketing saja** (landing, blog, pricing, panduan data). Backend, dashboard investigasi, dan agen analisis dapat dikembangkan sebagai produk/infra terpisah; dokumen ini tetap menjelaskan visi produk lengkap untuk perencanaan.
 
 2) Sasaran (Goals) dan Batasan (Non-Goals)
-Goals v1:
+
+**Ruang lingkup repo publik (saat ini)**  
+Hanya **situs marketing**: landing, blog, pricing, explore-data, metodologi risiko. Tidak ada dashboard investigasi, composer analisis, atau service API di repositori ini.
+
+**Visi produk / fase mendatang** (dapat diimplementasikan di repo atau infra terpisah):
+
+Goals v1 (produk, bukan necessarily repo ini):
 - User dapat:
   - Masuk ke dashboard setelah connect Phantom (atau bypass lokal untuk demo).
   - Melihat bootstrap data dasar (profil, workspace, fitur, ringkasan histori dummy).
@@ -31,14 +37,18 @@ Non-Goals v1:
 - AML/Compliance Ops: Melihat histori analisis singkat dan status risiko.
 
 4) Ruang Lingkup v1
-In-scope:
+
+**Repo publik ini (in-scope aktual):**  
+Frontend marketing saja; konten publik dan alur Get Started (modal) tanpa koneksi wajib ke API Cockpit.
+
+**Produk / implementasi terpisah (in-scope perencanaan PRD, di luar atau bersama repo lain):**
 - Backend Node.js + TypeScript (satu service tipis boleh) yang menyediakan:
   - Auth wallet Phantom (challenge/verify) dan sesi (JWT atau cookie session).
   - Dashboard bootstrap API.
   - Analyses API: create/get/list + SSE untuk progres run.
   - Proxy Jupiter Ultra.
   - Penyimpanan metadata (Postgres/SQLite) + penyimpanan file/artifact lokal sederhana.
-- Frontend penyesuaian ringan untuk konsumsi API di atas (tanpa perubahan UI besar).
+- Frontend penyesuaian untuk konsumsi API di atas (dashboard, composer) bila produk tersebut dipilih untuk dikembangkan.
 
 Out-of-scope:
 - Editor kasus lengkap, settings lengkap, API keys issuance, usage metering real, billing real.
@@ -174,13 +184,14 @@ Phase 4 — Proxy & Riwayat (P4 sebagian)
 - Jupiter Ultra (proxy backend), Helius Sender (disarankan dari backend/trusted client; jangan menaruh kunci vendor di bundle browser).
 - DB (Postgres/SQLite), runtime Node 20+.
 
-15) Pekerjaan Frontend Minimal
+15) Pekerjaan Frontend (bila dashboard + backend dipasangkan)
 - Tambah pemanggilan API:
   - Saat login (jika dipakai): panggil `/auth/challenge` + `/auth/verify`.
   - Saat load dashboard: panggil `/dashboard/bootstrap`.
   - Saat submit composer: `POST /analyses` lalu buka SSE `/analyses/:id/events`.
   - Tampilkan hasil & update history.
-- Konfigurasi: endpoint backend (base URL) untuk bootstrap/analisis; integrasi swap/tx tetap server-side.
+- Konfigurasi: endpoint backend (base URL) untuk bootstrap/analisis; integrasi swap/tx tetap server-side.  
+  **Catatan:** build marketing saat ini tidak menyertakan dashboard ini; §15 menggambarkan pekerjaan frontend produk penuh.
 
 16) Pertanyaan Terbuka
 - Mekanisme session: cookie httpOnly vs Bearer JWT? (rekomendasi: cookie httpOnly)
@@ -189,48 +200,13 @@ Phase 4 — Proxy & Riwayat (P4 sebagian)
 - SSE vs WebSocket: tetap SSE untuk kesederhanaan v1, siapkan fallback jika Nginx/proxy bermasalah.
 
 —
-Lampiran A — Inventaris Repo (ringkas)
-- frontend/: Vite React app; routes di `src/App.tsx`; Get Started flow `components/SiteHeader.tsx`, `context/GetStartedContext.tsx`, `components/GetStartedModal.tsx`; dashboard shell di `src/app/build-dashboard/*` (tanpa gate wallet di UI saat ini).
-- backend/: API service (Node/TS); `backend/agent/` untuk engine analisis; spesifikasi perilaku AIAgent di §7.6; `backend/dataset/` untuk data statis; `backend/supabase/migrations/` untuk skema DB.
+Lampiran A — Inventaris repo (saat ini)
+
+- **`frontend/`** — aplikasi Vite + React + TypeScript; rute di `src/App.tsx`; alur Get Started: `components/SiteHeader.tsx`, `context/GetStartedContext.tsx`, `components/GetStartedModal.tsx`, `components/GetStartedTrigger.tsx`; halaman publik di `src/pages/`.
+- **`docs/`** — catatan teknis dan integrasi (indeks: [`docs/README.md`](docs/README.md)); tidak wajib untuk menjalankan situs.
+- **Tidak ada** folder `backend/`, dashboard investigasi, atau dataset besar di repo ini. §7–16 PRD ini menjelaskan kontrak dan model data untuk **perencanaan produk** bila layanan API dikembangkan terpisah.
 
 —
-Lampiran B — Catatan Eksplorasi Asal (sebelumnya di PRD.md)
+Lampiran B — Catatan eksplorasi
 
-[BEGIN ORIGINAL NOTES]
-**Exploring GetStarted flow**
-
-I need to look up specifics about the GetStarted flow, maybe using the code explorer for a broad search of the codebase. My last attempt had a connection issue, so I’ll see if I can still utilize that tool. I should review certain files like SiteHeader, GetStartedTrigger, and others related to the user journey. I’ll also fetch the langchain quickstart docs. It seems the user just wants to identify backend priorities without needing code changes. So, I might suggest creating a README.md for clarity.**Identifying backend priorities**
-
-The user asked me to identify the most sensible priorities for backend implementation, not necessarily to implement anything right now, so this should just be analysis. I’ll focus on examining the user journey from landing to dashboard. Gathering relevant code will help me understand what needs to be prioritized. It's all about assessing what makes the most sense for the backend structure based on this user journey. Time to dive into that code!
-Saya akan petakan **journey user dari landing → onboarding → wallet connect → dashboard**, lalu cocokkan dengan **backend yang paling dibutuhkan dulu**, sambil melihat apakah `backend/agent` cocok dijadikan fondasi agent service berbasis Deep Agents. Saya belum akan menulis kode; fokus saya sekarang adalah mengurutkan prioritas implementasi yang paling masuk akal.
-**Analyzing backend implementation**
-
-I need to gather some pricing information, but it seems I might already know what I need. I could search for “New analysis” and look at relevant documents. It's important to identify sensible priorities for backend implementation from the user journey to the dashboard. I could structure my findings by journey stage and backend needs, possibly recommending phased priorities. Including existing code references could also help support my points, but I might skip snippets altogether to keep things concise.**Prioritizing implementation tasks**
-
-I should mention file names without including code. The final answer will be in Indonesian, but I need to remember user preferences about programming language usage. Since I’m not coding now, I can focus on prioritizing tasks rather than implementation. 
-
-I could create a priority matrix to structure my thoughts:  
-- P0: identity/session layer bridging wallet to backend  
-- P1: BFF/API gateway  
-- P2: job orchestration for analysis  
-- P3: investigation data ingestion/indexer  
-- P4: persistence for workspaces/cases  
-- P5: settings/integrations management  
-- P6: exports/audit/billing  
-
-I'll tailor these priorities to the user journey.**Discussing backend structure**
-
-I need to consider persistence around case management, history, and settings for API pages. It seems I should discuss Deep Agents in the backend since the folder is empty. Maybe I can recommend using Deep Agents for orchestration services rather than as a public API directly, perhaps pairing it with a thin BFF. I could suggest structuring things under both backend/agent and backend/api, even if that doesn't involve any code changes for now, given the empty folder situation.**Crafting recommendations for DashboardComposer**
-
-I’m thinking I might need to gather one more search for DashboardComposer and New Analysis, even if it's possibly irrelevant. We've already covered DashboardLayout and DashboardComposer comprehensively enough. I’ll focus on maintaining brevity and clarity in my final recommendation. Using clear headings and bullet points could help. It might also be useful to indicate the current state of `backend/agent`, which is empty. 
-
-I can recommend an architecture combining backend/api and backend/agent, plus a DB, and consider merging services to simplify things.**Structuring the phased approach**
-
-I think it's a good idea to list out the phases like "Phase 1", "Phase 2," etc. I’ll lay out the structure, including: the journey of reading, priority order with rationale, proposed minimal backend scope for `backend/agent`, and the first version of API endpoints. I might also detail a minimal data model while emphasizing what to avoid initially. 
-
-Directly mapping frontend flows is important, too: Landing CTA leads to `GetStartedModal`, wallet connect, and the final dashboard. It’s necessary to highlight that no backend is needed for landing content, possibly using a simple markdown table with bold bullet pairs. I’ll also mention why "Deep Agents" fits the `backend/agent` role as a worker behind the REST/stream API. Finally, I’ll focus on creating a prioritized backlog.**Defining the project backlog**
-
-I’m outlining a prioritized backlog starting with essential tasks. For P0, I’ll include the wallet challenge/session. In P1, I should focus on the workspace bootstrap API and the analysis run API using streaming with Deep Agents. Then for P2, I'll ensure persistence of runs, history, and artifacts, along with an initial investigation query layer using a mock adapter. Moving to P3, I'll work on real Solana adapters and indexers, and then finally for P4, I'll address cases, settings, API keys, and billing.
-Saya sudah punya urutan prioritas yang cukup jelas. Yang paling penting: **jangan mulai dari indexer besar dulu**—dari journey user yang ada sekarang, nilai backend tercepat datang dari **session/workspace bootstrap + agent run orchestration**, baru kemudian data pipeline investigasi.
-…
-[END ORIGINAL NOTES]
+Catatan kerja internal panjang telah dihapus dari PRD. Ringkasan prioritas implementasi backend (session → bootstrap → orkestrasi run → data) tetap tercermin di §11 Tonggak. Untuk materi teknis tambahan, lihat [`docs/README.md`](docs/README.md).

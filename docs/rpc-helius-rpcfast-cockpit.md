@@ -1,3 +1,5 @@
+> **Scope:** RPC and streaming options for Solana apps. The marketing site does **not** embed RPC keys; use a **server-side proxy** or env in your API service. This note is reference material.
+
 # Helius + RPC Fast (Solana RPC) → Cockpit
 
 How **[Helius](https://www.helius.dev)** and **[RPC Fast](https://docs.rpcfast.com)** fit **read RPC**, **transaction landing**, and **streaming** for a Solana-heavy app. Official doc indexes: [Helius `llms.txt`](https://www.helius.dev/llms.txt), [RPC Fast `llms.txt`](https://docs.rpcfast.com/llms.txt).
@@ -95,7 +97,7 @@ Primary reference: [**Protect your Solana API keys**](https://www.helius.dev/doc
 
 **Operational habits** (from the same doc): keys only in **environment variables**, separate keys per **dev/staging/prod**, **rotate** on suspicion, watch the dashboard for spikes and odd geos.
 
-**Cockpit:** the first-class pattern remains **Cockpit `backend/` proxy** with `HELIUS_API_KEY` in `backend/.env`; alternatively deploy **helius-rpc-proxy** and set **`VITE_SOLANA_RPC_URL`** (or equivalent) to the worker origin **only**—never commit keys. **Sender** can use a **keyless** HTTPS path for submits; do not conflate that with unlimited read RPC access.
+**Cockpit:** the first-class pattern remains a **server-side RPC proxy** with `HELIUS_API_KEY` in the API service env; alternatively deploy **helius-rpc-proxy** and set **`VITE_SOLANA_RPC_URL`** (or equivalent) to the worker origin **only**—never commit keys. **Sender** can use a **keyless** HTTPS path for submits; do not conflate that with unlimited read RPC access.
 
 ---
 
@@ -117,12 +119,12 @@ Primary reference: [**Protect your Solana API keys**](https://www.helius.dev/doc
 
 | Need | Prefer | Cockpit today |
 |------|--------|----------------|
-| Land signed swaps / txs without exposing a Helius API key | **Helius Sender** (`/fast` or regional endpoints per Helius Sender docs) | Not wired in repo yet; implement via **`backend/`** (recommended) rather than a browser helper |
+| Land signed swaps / txs without exposing a Helius API key | **Helius Sender** (`/fast` or regional endpoints per Helius Sender docs) | Implement via **API service / proxy** (recommended) rather than a browser helper |
 | Read RPC (`getBalance`, `getLatestBlockhash`, simulation, account reads) with a **paid** provider | **Backend proxy** + env `HELIUS_API_KEY` or RPC Fast credentials | Not wired in repo yet |
 | Browser **read** RPC without embedding `?api-key=` | **Helius secure URL** (rate-limited) or **[helius-rpc-proxy](https://github.com/helius-labs/helius-rpc-proxy)** worker URL as `VITE_SOLANA_RPC_URL` | Lock down **CORS** + Helius **allowed IP/CIDR** to Cloudflare if using the worker (§1.4) |
 | Wallet NFTs / tokens / cNFTs in dashboard | **Helius DAS** (or equivalent) **server-side** | Add backend route; never ship provider API keys in Vite |
 | Full wallet / case timeline (tx + ATA activity, filters, pagination) | **`getTransactionsForAddress`** on proxied RPC, or **Wallet API** `…/history` / `…/transfers` | Server-only; mind **credits** (gTFA) and Wallet API **beta** stability |
-| Backfill Cockpit-owned investigation index | **gTFA** + **LaserStream** (or webhooks) per [indexing guide](https://www.helius.dev/docs/rpc/how-to-index-solana-data.md) | ETL jobs in backend/worker; store provenance (slot, signature, source method) |
+| Backfill Cockpit-owned investigation index | **gTFA** + **LaserStream** (or webhooks) per [indexing guide](https://www.helius.dev/docs/rpc/how-to-index-solana-data.md) | ETL jobs in a worker service; store provenance (slot, signature, source method) |
 | Real-time indexers, alerts, “live” dashboard tiles | **Helius Webhooks** or **LaserStream**; **RPC Fast Yellowstone / Shredstream** on dedicated plans | Design choice: align with one primary streaming vendor per environment to simplify ops |
 | **Account** or **filtered tx** live stream over WSS | **`accountSubscribe`** / **`transactionSubscribe`** (this doc §1.1) on `wss://mainnet.helius-rpc.com?api-key=` | **Backend worker only**; bridge to SSE or queue; [accountSubscribe](https://www.helius.dev/docs/enhanced-websockets/account-subscribe.md), [transactionSubscribe](https://www.helius.dev/docs/enhanced-websockets/transaction-subscribe.md) |
 | Priority fee hints before `sendTransaction` | **Helius Priority Fee API** | Optional future integration next to Sender |

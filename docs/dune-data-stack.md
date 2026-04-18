@@ -1,6 +1,8 @@
+> **Scope:** How Dune/Sim fit investigation-style workflows. This repo has **no** backend client; implement Sim/Dune calls in your **API service**. This note is reference material.
+
 # Dune data stack → Cockpit
 
-How [Dune](https://dune.com) products fit **compliance / investigation** style workflows and how Cockpit already wires **Sim** (real-time wallet APIs). Official doc indexes: [Dune `llms.txt`](https://docs.dune.com/llms.txt), [Sim `llms.txt`](https://docs.sim.dune.com/llms.txt).
+How [Dune](https://dune.com) products fit **compliance / investigation** style workflows and how a Cockpit **API service** can wire **Sim** (real-time wallet APIs). Official doc indexes: [Dune `llms.txt`](https://docs.dune.com/llms.txt), [Sim `llms.txt`](https://docs.sim.dune.com/llms.txt).
 
 ## Product map (what each surface is for)
 
@@ -10,7 +12,7 @@ How [Dune](https://dune.com) products fit **compliance / investigation** style w
 | **Datashare** | Replicate Dune’s curated tables into **your** Snowflake / BigQuery — join on-chain data with internal KYC, cases, GL in the warehouse; queries never leave your VPC. | [Datashare overview](https://docs.dune.com/datashare/datashare.md) |
 | **Data Hub** | SQL (DuneSQL), dashboards, schedules, alerts in the **browser** — analyst-first exploration on shared Dune infra. | [Data Hub overview](https://docs.dune.com/web-app/overview.md) |
 | **Data catalog** | Raw / decoded / curated datasets across **100+ chains**; pick tables before writing SQL or API jobs. | [Data catalog](https://docs.dune.com/data-catalog/overview.md) |
-| **Data API** | Programmatic **saved query execution**, pipelines, uploads, credits — integrate compliance reports or scheduled extracts into Cockpit’s backend. | [Data API overview](https://docs.dune.com/api-reference/api-overview.md) |
+| **Data API** | Programmatic **saved query execution**, pipelines, uploads, credits — integrate compliance reports or scheduled extracts into a Cockpit **API service**. | [Data API overview](https://docs.dune.com/api-reference/api-overview.md) |
 | **Dune MCP** | Remote MCP (`https://api.dune.com/mcp/v1`) so agents discover tables, run SQL, fetch executions — OAuth or `x-dune-api-key`. | [Dune MCP](https://docs.dune.com/api-reference/agents/mcp.md) |
 | **Sim (Dune Sim API)** | **Real-time** balances, activity, txs, token info, webhooks (CU-based); complements **historical** Dune SQL. | [Sim docs](https://docs.sim.dune.com), [LLMs & AI tools](https://docs.sim.dune.com/build-with-ai.md), [Agent reference](https://docs.sim.dune.com/agent-reference.md) |
 
@@ -18,7 +20,7 @@ How [Dune](https://dune.com) products fit **compliance / investigation** style w
 
 | Need | Prefer | Cockpit today |
 |------|--------|----------------|
-| Hot wallet view, activity, Solana/EVM reads in an agent tool | **Sim API** (`X-Sim-Api-Key`) | [`backend/src/integrations/duneSim/client.ts`](../backend/src/integrations/duneSim/client.ts) — env `SIM_API_KEY` |
+| Hot wallet view, activity, Solana/EVM reads in an agent tool | **Sim API** (`X-Sim-Api-Key`) | Implement a Sim client server-side; env `SIM_API_KEY` (never in Vite) |
 | Custom SQL over historical decoded data, scheduled reports | **Data Hub** + **Data API** | Add `DUNE_API_KEY` (or team token) server-side; call [executions API](https://docs.dune.com/api-reference/api-overview.md); never expose in Vite |
 | Warehouse-native joins (cases × on-chain) | **Datashare** | Ops / data team: grant share to BigQuery/Snowflake; Cockpit reads aggregates via your existing warehouse client, not necessarily Dune HTTP |
 | IDE / Cursor agent helping write Sim or Dune SQL | **Sim agent reference** + optional **Dune MCP** | Add MCP in Cursor per Dune docs; index `docs.sim.dune.com` per [Build with AI](https://docs.sim.dune.com/build-with-ai.md) |

@@ -1,6 +1,8 @@
+> **Scope:** Design patterns for a **future** Cockpit analysis API. This repository contains the **marketing frontend** only (`frontend/`). Wallet sessions, SSE, and agent loops apply when you implement a separate API service.
+
 # Hermes-style agent runtime → Cockpit adaptation
 
-This document distills concepts from **Hermes Agent** (Nous Research) and related time-series material, mapped to Cockpit’s Node/TypeScript backend, wallet sessions, and analysis SSE flow. It is **not** a port of Hermes; it records design patterns worth adapting. Product-facing agent responsibilities remain in `PRD.md` §7.6.
+This document distills concepts from **Hermes Agent** (Nous Research) and related time-series material, mapped to a **planned** Node/TypeScript API service, wallet sessions, and analysis SSE flow. It is **not** a port of Hermes; it records design patterns worth adapting. Product-facing agent responsibilities remain in `PRD.md` §7.6.
 
 **Sources (read for full detail):**
 

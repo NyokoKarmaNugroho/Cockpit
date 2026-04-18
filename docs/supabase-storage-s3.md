@@ -1,3 +1,5 @@
+> **Scope:** Supabase Storage S3 API patterns. Optional for any project using Supabase; not required to run the **marketing** app in `frontend/`.
+
 # Supabase Storage — S3-compatible API and authentication
 
 Supabase exposes Storage over an **S3-compatible endpoint** so you can use the AWS SDK, `aws s3`, and other S3 tools. Official guide: [**S3 Authentication**](https://supabase.com/docs/guides/storage/s3/authentication).
@@ -13,7 +15,7 @@ Generate credentials and copy **endpoint** + **region** from the project dashboa
 | **S3 access keys** | Access Key ID + Secret Access Key from dashboard | **Full** Storage API access; **bypasses RLS** on buckets | **Server-side only** — ETL, workers, trusted backends |
 | **Session token** | `accessKeyId`: project ref · `secretAccessKey`: **anon** key · `sessionToken`: **user JWT** | Operations **scoped to the user**; **RLS** on the Storage schema applies | Server acting on behalf of a user, or **client** S3 SDK when policy allows |
 
-**Never** commit S3 access keys or service role keys to the repo; use `backend/.env` (gitignored) or your secret manager.
+**Never** commit S3 access keys or service role keys to the repo; use your API or worker `.env` (gitignored) or your secret manager.
 
 ---
 

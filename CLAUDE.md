@@ -2,6 +2,8 @@
 
 > Single-file agent guidelines from [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) (MIT), inspired by [Andrej Karpathy’s observations](https://github.com/forrestchang/andrej-karpathy-skills#the-problems) on LLM coding pitfalls.
 
+**Project context (Cockpit):** This repository is primarily a **marketing frontend** (`frontend/`, Vite + React). [`PRD.md`](PRD.md) describes broader product vision; [`docs/`](docs/) holds integration notes for possible future services. Prefer changes that match the existing app structure and do not assume a `backend/` tree unless the user is working in a separate service repo.
+
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.

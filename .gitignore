@@ -27,6 +27,7 @@ secrets/
 # Dependencies & build output
 node_modules/
 dist/
+.vite/
 build/
 .next/
 out/
