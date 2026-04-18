@@ -54,16 +54,12 @@ Thumbs.db
 coverage/
 .nyc_output/
 
-# Supabase CLI local state (also see backend/supabase/.gitignore)
+# Supabase CLI local state
 **/.supabase/
 
 # Download / partial files (often accidental)
 *.crdownload
 *.part
-
-# Large ICIJ CSVs exceed GitHub’s 100MB blob limit — keep locally, import via scripts
-backend/dataset/The ICIJ Offshore Leaks Database/nodes-entities.csv
-backend/dataset/The ICIJ Offshore Leaks Database/relationships.csv
 
 # Optional local overrides
 *.local.override

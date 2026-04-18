@@ -10,7 +10,7 @@ const product: ProductLink[] = [
 
 const developers = [
   { label: "Docs", href: "#docs" },
-  { label: "Dashboard", href: "/build-dashboard" },
+  { label: "Explore data", href: "/explore-data" },
   { label: "API status", href: "#docs" },
   { label: "Changelog", href: "#docs" },
 ];

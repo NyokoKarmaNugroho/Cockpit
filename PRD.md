@@ -5,7 +5,7 @@ Dokumen pemilik: PM/Eng (draft oleh asisten)
 Status: Draft v1 (untuk review)
 
 1) Ringkasan Produk
-Cockpit adalah aplikasi web (frontend Vite + React + TypeScript) untuk intelijen blockchain yang menargetkan alur kerja investigasi/analisis. Repo saat ini berisi UI marketing + shell dashboard dan integrasi wallet Phantom di sisi klien; belum ada backend. V1 akan menambah backend minimal agar alur “Get started → connect wallet → masuk dashboard → buat analisis → lihat progres/hasil” benar-benar berfungsi end-to-end.
+Cockpit adalah aplikasi web (frontend Vite + React + TypeScript) untuk intelijen blockchain yang menargetkan alur kerja investigasi/analisis. **Repo publik saat ini berisi situs marketing saja** (landing, blog, pricing, panduan data). Backend, dashboard investigasi, dan agen analisis dapat dikembangkan sebagai produk/infra terpisah; dokumen ini tetap menjelaskan visi produk lengkap untuk perencanaan.
 
 2) Sasaran (Goals) dan Batasan (Non-Goals)
 Goals v1:
@@ -45,18 +45,13 @@ Out-of-scope:
 - Indexer data on-chain sendiri atau pipeline ingestion besar.
 
 5) Ringkas Arsitektur Saat Ini (Repo)
-- Frontend: Vite + React + React Router 7, Tailwind. Rute:
-  - “/” (Landing), “/blog”, “/explore-data”, “/methodology/risk-exposure”, “/pricing”.
-  - “/build-dashboard” memakai `DashboardLayout` (views: index, search, investigations, studio, history, cases, api, settings) — **tanpa** gate wallet di UI saat ini.
-- Integrasi klien:
-  - (Dihapus) Phantom Connect / modal login wallet di frontend.
-  - Jupiter Ultra / Helius Sender direncanakan sebagai integrasi **server-side** (proxy + submit tx), bukan helper browser di repo ini.
-- Backend: service Node/TS sedang berkembang; orkestrasi analisis mengacu pada **AIAgent** (§7.6): prompt/tool assembly, mode provider, cancelable calls, tool execution, history OpenAI-shaped, compression/retry/fallback, iteration budget, flush memory. Direktori `backend/agent/` menampung engine agent; `backend/dataset/` berisi konten data (mis. RAG/API specs).
+- **Hanya frontend publik**: Vite + React + React Router 7, Tailwind. Rute: `/` (Landing), `/blog`, `/explore-data`, `/methodology/risk-exposure`, `/pricing`.
+- **Tidak disertakan di repo ini**: backend API, dashboard investigasi, dataset besar, atau migrasi database — dapat dikembangkan di repo/infra terpisah jika diperlukan.
+- Integrasi klien (fase berikutnya, di luar repo ini): auth wallet, proxy Jupiter Ultra, agen analisis, dll. mengikuti §7.
 
 6) Alur Pengguna Utama (As-Is → To-Be)
-- Landing → Get started (modal atau langsung) → navigasi ke “/build-dashboard”.
-- Di dashboard, user menekan “New analysis”/composer → kirim prompt → melihat progres → hasil disimpan ke history.
-- To-be: alur di atas memanggil backend nyata: auth, bootstrap, create run, stream, persist.
+- Landing → Get started (modal) → materi produk publik (pricing, panduan data, metodologi).
+- Dashboard dan analisis streaming direncanakan sebagai fase produk terpisah (bukan bagian dari build situs marketing ini).
 
 7) Kebutuhan Fungsional (FRD)
 7.1 Auth & Session berbasis Wallet

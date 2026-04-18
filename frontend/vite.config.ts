@@ -8,7 +8,6 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (!id.includes("node_modules")) return undefined;
-          if (id.includes("@xyflow/react")) return "xyflow";
           if (id.includes("@supabase/supabase-js")) return "supabase";
           if (id.includes("react-router")) return "router";
           if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/") || id.includes("node_modules/scheduler/")) {

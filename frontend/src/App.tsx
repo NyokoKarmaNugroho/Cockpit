@@ -1,15 +1,6 @@
 import { lazy, Suspense, type ReactNode } from "react";
 import { Route, Routes } from "react-router-dom";
 
-const DashboardLayout = lazy(async () => ({ default: (await import("./app/build-dashboard/DashboardLayout")).DashboardLayout }));
-const ApiPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/ApiPage")).ApiPage }));
-const CasesPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/CasesPage")).CasesPage }));
-const HistoryPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/HistoryPage")).HistoryPage }));
-const InvestigationsPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/InvestigationsPage")).InvestigationsPage }));
-const SearchPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/SearchPage")).SearchPage }));
-const SettingsPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/SettingsPage")).SettingsPage }));
-const StudioPage = lazy(async () => ({ default: (await import("./app/build-dashboard/pages/StudioPage")).StudioPage }));
-const TokenDashboardView = lazy(async () => ({ default: (await import("./app/build-dashboard/views/TokenDashboardView")).TokenDashboardView }));
 const BlogPage = lazy(async () => ({ default: (await import("./pages/BlogPage")).BlogPage }));
 const ExploreDataPage = lazy(async () => ({ default: (await import("./pages/ExploreDataPage")).ExploreDataPage }));
 const LandingPage = lazy(async () => ({ default: (await import("./pages/LandingPage")).LandingPage }));
@@ -43,16 +34,6 @@ export function App() {
         element={withSuspense(<RiskExposureMethodologyPage />, "Loading methodology…")}
       />
       <Route path="/pricing" element={withSuspense(<PricingPage />, "Loading pricing…")} />
-      <Route path="/build-dashboard" element={withSuspense(<DashboardLayout />, "Loading dashboard workspace…")}>
-        <Route index element={withSuspense(<TokenDashboardView />, "Loading dashboard overview…")} />
-        <Route path="search" element={withSuspense(<SearchPage />, "Loading search workspace…")} />
-        <Route path="investigations" element={withSuspense(<InvestigationsPage />, "Loading tracer…")} />
-        <Route path="studio" element={withSuspense(<StudioPage />, "Loading OSINT Studio…")} />
-        <Route path="history" element={withSuspense(<HistoryPage />, "Loading history…")} />
-        <Route path="cases" element={withSuspense(<CasesPage />, "Loading cases…")} />
-        <Route path="api" element={withSuspense(<ApiPage />, "Loading API workspace…")} />
-        <Route path="settings" element={withSuspense(<SettingsPage />, "Loading settings…")} />
-      </Route>
     </Routes>
   );
 }

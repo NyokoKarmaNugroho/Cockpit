@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useGetStarted } from "../context/GetStartedContext";
 import { GetStartedTrigger } from "./GetStartedTrigger";
 
@@ -52,8 +52,6 @@ const mobileNav = [
   { label: "Get started", href: "#get-started" },
 ];
 
-const getStartedDirectDashboard = import.meta.env.VITE_GET_STARTED_DIRECT_DASHBOARD === "true";
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<"product" | "learn" | null>(null);
@@ -61,7 +59,6 @@ export function SiteHeader() {
   const productMenuId = useId();
   const learnMenuId = useId();
   const desktopNavRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
   const { open: openGetStarted, markGetStartedPressed } = useGetStarted();
 
   useEffect(() => {
@@ -376,11 +373,7 @@ export function SiteHeader() {
                           className="mobile-nav-link flex min-h-[72px] w-full items-center py-4 text-left font-display text-2xl font-semibold text-ink sm:text-[1.75rem]"
                           onClick={() => {
                             markGetStartedPressed();
-                            if (getStartedDirectDashboard) {
-                              navigate("/build-dashboard");
-                            } else {
-                              openGetStarted();
-                            }
+                            openGetStarted();
                             close();
                           }}
                         >

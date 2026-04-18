@@ -1,8 +1,0 @@
-{
-  "dependencies": ["."],
-  "graphs": {
-    "cross_chain_clustering": "./src/langgraph/crossChainClustering.ts:graph",
-    "on_chain_investigator": "./src/langgraph/onChainInvestigator.ts:graph",
-    "cockpit_supervisor": "./src/langgraph/cockpitSupervisor.ts:graph"
-  }
-}

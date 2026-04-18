@@ -1,5 +1,5 @@
 import { useEffect, useId } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useGetStarted } from "../context/GetStartedContext";
 
 export function GetStartedModal() {
@@ -47,29 +47,28 @@ export function GetStartedModal() {
           </button>
         </div>
         <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-          Open the investigation workspace to explore Cockpit flows with sample data. Wallet connection has been removed from
-          this build.
+          Start with Cockpit’s public product surfaces while the self-serve dashboard is unavailable in this build.
+          Review the methodology, pricing, and data-readiness materials to understand the workflow.
         </p>
 
-        <div className="mt-6 border-t border-ink/10 pt-6">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
           <button
             type="button"
-            className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-ink px-4 text-sm font-semibold text-canvas hover:bg-ink/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink/30 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            className="inline-flex min-h-11 items-center justify-center rounded-lg bg-ink px-4 text-sm font-semibold text-canvas hover:bg-ink/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink/30 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
             onClick={() => {
-              navigate("/build-dashboard", { replace: true });
+              navigate("/explore-data", { replace: true });
               close();
             }}
           >
-            Open workspace
+            Explore data guide
           </button>
-        </div>
-
-        <div className="mt-6 border-t border-ink/10 pt-6">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-faint">Helius Sender</h3>
-          <p className="mt-2 text-sm text-ink-muted">
-            When you wire signing back in, submit serialized transactions from your backend via{" "}
-            <code className="text-ink">POST /v0/transactions</code> on Sender—keep RPC keys off the client.
-          </p>
+          <Link
+            to="/pricing"
+            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-ink/20 px-4 text-sm font-semibold text-ink transition hover:border-ink/35 hover:bg-ink/5"
+            onClick={close}
+          >
+            View pricing
+          </Link>
         </div>
       </div>
     </div>
